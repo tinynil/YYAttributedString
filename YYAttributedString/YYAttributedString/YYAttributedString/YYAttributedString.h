@@ -19,10 +19,11 @@
 
 @interface YYLinkTextViewItem : NSObject
 
-@property(nonatomic, strong)NSString *textContent;
-@property(nonatomic, strong)UIColor *textColor;
-@property(nonatomic, strong)UIFont *textFont;
-@property(nonatomic, assign)CGFloat lineSpacing;
+@property(nonatomic, strong) NSString *textContent;
+@property(nonatomic, strong) UIColor *textColor;
+@property(nonatomic, strong) UIFont *textFont;
+@property(nonatomic, assign) CGFloat lineSpacing;
+@property(nonatomic, assign) NSTextAlignment textAlignment;
 
 - (NSAttributedString *)attributeStringNormal;
 

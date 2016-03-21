@@ -40,12 +40,13 @@
     [sub addAttribute:NSForegroundColorAttributeName value:textColor range:range];
     [sub addAttribute:NSFontAttributeName value:self.textFont range:range];
     
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.alignment = _textAlignment;
     if (_lineSpacing>0)
     {
-        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         paragraphStyle.lineSpacing = _lineSpacing;
-        [sub addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     }
+    [sub addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
     return sub;
 }
 
